@@ -17,6 +17,7 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "preserve",
+    "types": ["react", "react-dom", "node"],
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
