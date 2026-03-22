@@ -23,7 +23,7 @@ export default function Home() {
       <footer className="bg-white/50 backdrop-blur-sm border-t border-gray-200/50 py-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm text-gray-600">
-            © 2024 FitCoach AI. Designed with ❤️ for your fitness journey.
+            © 2026 FitCoach AI. Designed with ❤️ for your fitness journey.
           </p>
         </div>
       </footer>
