@@ -26,15 +26,6 @@ WHAT TO DO:
 
 Remember: Your ONLY purpose is to help with fitness and health-related questions.`;
 
-// List of common non-fitness keywords to detect off-topic questions
-const NON_FITNESS_KEYWORDS = [
-  'movie', 'film', 'actor', 'actress', 'politics', 'politician', 'election',
-  'history', 'historical', 'book', 'novel', 'author', 'recipe', 'cook', 'cooking',
-  'love', 'relationship', 'dating', 'career', 'job', 'weather', 'math', 'science',
-  'geography', 'animal', 'plant', 'programming', 'code', 'software', 'computer',
-  'music', 'song', 'artist', 'game', 'video game', 'sport (but not as fitness)',
-];
-
 // Function to check if a message is fitness-related
 function isFitnessRelated(text: string): boolean {
   const fitnessKeywords = [

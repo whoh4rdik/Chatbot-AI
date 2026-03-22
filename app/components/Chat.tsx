@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import { SendIcon, LoadingIcon, BotIcon, UserIcon } from './Icons';
 
@@ -27,23 +27,23 @@ export default function Chat() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Smart auto-scroll - only scroll if already at bottom
-  const isAtBottom = () => {
+  const isAtBottom = useCallback(() => {
     if (!messagesContainerRef.current) return true;
     const container = messagesContainerRef.current;
     return (
       container.scrollHeight - container.clientHeight <= container.scrollTop + 50
     );
-  };
+  }, []);
 
-  const scrollToBottom = () => {
+  const scrollToBottom = useCallback(() => {
     if (isAtBottom()) {
       messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
-  };
+  }, [isAtBottom]);
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, scrollToBottom]);
 
   const generateBotResponse = async (userMessage: string): Promise<string> => {
     try {
