@@ -65,6 +65,12 @@ The chatbot intelligently filters requests to ensure responses are always fitnes
 ---
 
 **Built with ❤️ for fitness enthusiasts worldwide.**
+
+---
+
+## 📝 Changelog
+
+- v1.0.1: Fixed Vercel deployment build errors
 ```
 
 ### Linting
